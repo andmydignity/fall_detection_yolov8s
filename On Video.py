@@ -29,10 +29,10 @@ for result in results:
                 
             else:
                 cv2.putText(img, "Stable", (int(x), int(y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-            #cv2.imwrite("frames/frame_{}.jpg".format(frame), img)
+            cv2.imwrite("frames/frame_{}.jpg".format(frame), img)
     except:
         pass
-        #cv2.imwrite("frames/frame_{}.jpg".format(frame), img)
+        cv2.imwrite("frames/frame_{}.jpg".format(frame), img)
 
     frame+=1
 
