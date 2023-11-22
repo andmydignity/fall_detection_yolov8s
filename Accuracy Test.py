@@ -23,7 +23,7 @@ false_positive=0
 false_negative=0
 wrong_detection=0
 frame=1
-eşik_değer=1.4
+threshold=1.4
 total_time = 0
 for result in results:
     start_time = time.time()
@@ -35,7 +35,7 @@ for result in results:
             y = boxes.xywhn[0][1]
             w = boxes.xywhn[0][2]
             h = boxes.xywhn[0][3]
-            if w/h > eşik_değer:
+            if w/h > threshold:
                 status="Fall"
             else:
                 if status!="Fall":
