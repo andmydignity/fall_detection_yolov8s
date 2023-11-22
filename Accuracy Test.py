@@ -17,7 +17,7 @@ def get_class(column,filepath):
 
 source = 'Datasets/832/'
 csv_path='Datasets/832.csv'
-results = model(source, stream=True,device="cudo")
+results = model(source, stream=True,device="cuda")
 true=0
 false_positive=0
 false_negative=0
