@@ -19,6 +19,14 @@ for result in results:
             y = boxes.xywh[0][1]
             w = boxes.xywh[0][2]
             h = boxes.xywh[0][3]
+            kpts = result.keypoints
+            nk = kpts.shape[1]
+            for i in range(nk):
+                keypoint = kpts.xy[0, i]
+                x, y = int(keypoint[0].item()), int(keypoint[1].item())
+                #Draw keypoints on img
+                cv2.circle(img, (x, y), 5, (0, 255, 0), -1)  # Draw a green circle at each keypoint location
+
             if w/h > 1.4:
                 fall+=1
                 print("Fall detected at {} frame".format(frame))
